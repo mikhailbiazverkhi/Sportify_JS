@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportify</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div id="en-tête">
+        <div id="section-logo">
+            <img src="images/logo.jpg">
+            <span id="titre-logo">Sportify</span>
+        </div>
+        
+    </div>
+    <hr>
+
+    <div id="sections-conteneur">
+        <div id="section-chansons">
+            <div class="section-nom">Chansons</div>
+            <div id="liste-chansons">
+                <div class="ligne-info-chanson">
+                    <div class="cellule-chanson one">Titre</div>
+                    <div class="cellule-chanson two">Artiste</div>
+                    <div class="cellule-chanson three">Durée (s)</div>
+                    <div class="cellule-chanson three">Playlist</div>
+                    <div class="cellule-chanson four">Supprimer</div>
+                </div>
+
+            </div>
+            <div class="section-nom">Ajouter une chanson</div>
+            <div id="formulaire-ajout-chanson">
+                <form onsubmit="ajouterChansonDansListe()" action="javascript:void(0)"> 
+                    <div id="champs">
+                        <div>
+                            <label for="titre-chanson">Titre</label>
+                            <input id="titre-chanson" name="titre-chanson" type="text" required/>
+                        </div>
+                        <div>
+                            <label for="artiste-chanson">Artiste</label>
+                            <input id="artiste-chanson" name="artiste-chanson" type="text" required/>
+                        </div>
+                        <div>
+                            <label for="durée-chanson">Durée (secondes)</label>
+                            <input id="durée-chanson" name="durée-chanson" type="number" value="0" min="1" required/>
+                        </div>
+                    </div>
+                    <div class="boutons">
+                        <input id="submit" type="submit" value="Ajouter">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="playlist-section">
+            <div class="section-nom">Playlist</div>
+            <div id="playlist">
+
+            </div> 
+            <div class="section-nom">Information de la playlist</div>
+            <div id="informations-playlist">
+                <div id="durée-chansons-playlist">
+                    Durée : 
+                </div>
+                <div id="plus-longue-chanson">
+                    Plus longue chanson : 
+                </div>
+                <div id="plus-courte-chanson">
+                    Plus courte chanson :
+                </div>
+            </div>           
+        </div>
+    </div>
+    
+    <div id="pied-de-page">
+
+    </div>
+</body>
+</html>

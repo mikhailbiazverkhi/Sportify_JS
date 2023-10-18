@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* EN-TÊTE */
+
+#en-tête {
+    background-color:white;
+    padding-left: 10px;
+}
+
+#section-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#titre-logo {
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Sections de l'application: Liste de chansons + Formulaire d’ajout de chanson
+et Liste de lecture (Playlist) + Informations de la liste de lecture */
+
+#sections-conteneur {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+.section-nom {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Section verticale: Liste de chansons + Formulaire d’ajout de chanson */
+
+#section-chansons {
+    flex: 1.5 1 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Section verticale: Liste de lecture (Playlist) + Informations de la liste de lecture */
+
+#playlist-section {
+    flex: 1 1 0;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Sections: Liste de chansons et Liste de lecture (Playlist) */
+#liste-chansons, #playlist {
+    background-color: white;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid gray;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ligne de la chanson dans la liste de chansons */
+.ligne-info-chanson {  
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+/* Les effects de la Ligne de la chanson dans la liste de chansons */
+/* HOVER la Ligne de la chanson dans la liste de chansons */
+.ligne-info-chanson:hover {
+    background-color: aqua;
+}
+
+/* Sélécter la Ligne de la chanson dans la liste de chansons */
+.sélectionné {
+    background-color: aqua;
+}
+
+
+/* En-tête de la table de la liste de chansons */
+.ligne-info-chanson:first-child {
+    height: 42px;
+    pointer-events: none;
+    text-align: center; 
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
+    background-color: aqua;
+}
+
+/* Toutes les cellules d'une ligne (un élément pour la chanson) dans la liste de chansons */
+.cellule-chanson {
+    padding: 10px 10px 10px 10px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    white-space: nowrap;
+    min-width: 70px;
+}
+
+.cellule-chanson.one {
+    flex: 1.7 1 0;   
+}
+
+.cellule-chanson.two {
+    flex: 1.3 1 0; 
+}
+
+.cellule-chanson.three {
+    flex: 0.6 1 0;
+    min-width: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cellule-chanson.four {
+    flex: 0.7 1 0;
+    border-right: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*  Ligne de la Liste de lecture (Playlist) Titre d'une chanson */
+.titre-chanson-playlist {
+    border-bottom: 1px solid gray;
+    padding: 12px 10px 11px 10px;
+}
+
+
+/* Sections: Formulaire d’ajout de chanson et Informations de la liste de lecture */
+
+#formulaire-ajout-chanson, #informations-playlist {
+    background-color: beige;
+    height: 210px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+
+/* Formulaire d’ajout de chanson */
+
+#champs {
+    margin: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#champs > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#champs > div > label {
+    font-weight: bolder;
+    width: 150px;
+}
+
+#champs > div > input {
+    height: 20px;
+    width: 175px;
+    border: 1px solid gray;
+}
+
+.boutons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/* Informations de la liste de lecture */
+
+#informations-playlist {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#informations-playlist > div {
+    margin-top: 20px;
+    height: 24.2px;
+    font-weight: bolder;
+}
